@@ -5,21 +5,23 @@ void fib(int *a, int *b); /*function declaration*/
 
 int main(void){
 
+	#Taking inputs
 	int n;
 	printf("Enter a positive integer for n: \n");
 	scanf("%d", &n);
-
+	#Condtion for number less than 1
 	if(n<1){
 		printf("Nuber is less than 1\n");
 		exit(1);
 	}	
-
+	#Initializing variables
 	int n1=0;
 	int n2=1;
 	
 	printf("The Fibonacci sequence is : \n");
 	printf("%d, ", n1);
-
+	
+	#Calculating Fibonacci series by calling functions and passing variables by ref
 	int i;
 	for(i=1;i<n-1;i++){
 		fib(&n1, &n2);
@@ -31,7 +33,7 @@ int main(void){
 
 return 0;
 }
-
+#Defining the Fibonacci series function
 void fib(int *a, int *b){
 
 	int next;
