@@ -36,6 +36,7 @@ int main(){
 	return 0;
 }
 
+//Function to convert degree to radians
 float degtorad(float degang){
 	return((M_PI * degang)/180.0);
 }
