@@ -1,16 +1,18 @@
 #include<stdio.h>
 #include<math.h>
 
+#Declaration of functions
 double arctanh1(const double x, const double delta);
 
 double arctanh2(const double x);
 
 int main(){
-
+	
+	#Taking input for precision, start and end for series
 	double precis;
 	printf("Enter the precision for Maclaurin series : \n");
 	scanf("%lf", &precis);
-
+	
 	double begin, end;
 	printf("Enter the start and finish points for x:\n");
 	scanf("%lf, %'lf", &begin, &end);
@@ -23,7 +25,8 @@ int main(){
 
 	double i;
 	int j = 0;
-
+	
+	#Loop to calculate the resulting difference
 	for(i = begin; i<=end; i+=precis){
 		
 		tan1[j] = arctanh1(i, precis);
@@ -36,6 +39,7 @@ int main(){
 	return 0;
 }
 
+#Function definition
 double arctanh1(const double x, const double delta){
 	double arcTan = 0;
 	double ele;
@@ -52,6 +56,7 @@ double arctanh1(const double x, const double delta){
 	return arcTan;
 }
 
+#Calculation using math functions
 double arctanh2(const double x){
 	return (log(1+x) - log(1-x))/2;
 }
